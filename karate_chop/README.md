@@ -1,6 +1,8 @@
 #Kata02: Karate Chop //codekata.com
 
-url: [codekata.com: karate Chop](http://www.codekata.com/kata/kata02-karate-chop/)
+source: [codekata.com: karate Chop](http://www.codekata.com/kata/kata02-karate-chop/)
+
+Information below taken directly from codekata.com
 
 ##Goals:
 This Kata has three separate goals:
