@@ -1,16 +1,17 @@
-module KarateChop
+module KarateChop  
+
   module_function
-  
   def chop(target, haystack)
-    min = 0
-    max = haystack.length - 1
+    return do_chop(target, haystack, 0, haystack.length - 1)
+  end
+
+  private
+  def self.do_chop(target, haystack, min, max)
+    return -1 if min > max
     mid = min + ((max - min) / 2)
-    while min <= max
-      return mid if haystack[mid] == target
-      min = mid + 1 if target > haystack[mid]
-      max = mid - 1 if target < haystack[mid]
-      mid = min + ((max - min) / 2)
-    end
-    -1
+    return mid if target == haystack[mid]
+    min = mid + 1 if target > haystack[mid]
+    max = mid - 1 if target < haystack[mid]
+    do_chop(target, haystack, min, max)
   end
 end
